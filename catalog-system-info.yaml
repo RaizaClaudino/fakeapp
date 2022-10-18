@@ -6,3 +6,4 @@ metadata:
 spec:
   owner: fake-team
   domain: fakeland
+  hasPart: fakeapp
