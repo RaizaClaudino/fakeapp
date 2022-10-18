@@ -15,3 +15,4 @@ spec:
   partOf:
     - fake-system
   consumesApi: fake-api-second
+  dependsOn: fake-system-second
