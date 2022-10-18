@@ -15,7 +15,7 @@ spec:
   partOf:
     - fake-system
   consumesApi: fake-api-second
-  dependsOn: fake-system-second
+  dependsOn: [fake-system-second]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
