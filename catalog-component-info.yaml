@@ -16,3 +16,36 @@ spec:
     - fake-system
   consumesApi: fake-api-second
   dependsOn: fake-system-second
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: fake-api
+  tags: [externally-exposed]
+  description: API test
+spec:
+  type: openapi
+  lifecycle: production
+  owner: fake-saquad
+  system: fake-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: fake-api-second
+  tags: [externally-exposed]
+  description: API test 2
+spec:
+  type: openapi
+  lifecycle: production
+  owner: fake-saquad
+  system: fake-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: fake-saquad
+  description: The infra business unit
+spec:
+  type: business-unit
+  
