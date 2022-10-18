@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: fakeapp
+  annotations:
+    github.com/project-slug: RaizaClaudino/fakeapp
+    argocd/app-name: reducio-live
+    backstage.io/techdocs-ref: url:https://www.google.com/
+spec:
+  type: service
+  lifecycle: production
+  owner: RaizaClaudino
+  providesApis:
+    - fake-api
+  partOf:
+    - fake-system
