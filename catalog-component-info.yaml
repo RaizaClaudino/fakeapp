@@ -14,3 +14,4 @@ spec:
     - fake-api
   partOf:
     - fake-system
+  consumesApi: fake-api-second
