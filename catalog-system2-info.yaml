@@ -1,0 +1,42 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: fake-system-second
+  description: Handy tools to keep artists in the loop
+spec:
+  owner: fake-team
+  domain: fakeland
+  hasPart: fakeweb
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: fakeweb
+  annotations:
+    github.com/project-slug: RaizaClaudino/fakeapp
+    argocd/app-name: reducio-live
+    backstage.io/techdocs-ref: url:https://www.google.com/
+spec:
+  type: website
+  lifecycle: production
+  owner: RaizaClaudino
+  consumesApi:
+    - fake-api
+  partOf:
+    - fake-system-second
+  provides-api: 
+    - fake-api-second
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: fake-api-second
+  tags: [externally-exposed]
+  description: API test
+spec:
+  type: openapi
+  definition:
+    $text: https://github.com/RaizaClaudino/fakeapp/blob/main/openapi.yaml
+  lifecycle: production
+  owner: fake-saquad
+  system: fake-system-second
