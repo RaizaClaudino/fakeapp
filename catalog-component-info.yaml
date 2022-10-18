@@ -40,12 +40,3 @@ spec:
   lifecycle: production
   owner: fake-saquad
   system: fake-system
----
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: fake-saquad
-  description: The infra business unit
-spec:
-  type: business-unit
-  
