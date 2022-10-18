@@ -28,6 +28,9 @@ spec:
   lifecycle: production
   owner: fake-saquad
   system: fake-system
+  definition:
+    $text: https://github.com/sumup/referrals-api/blob/master/spec/openapi.yaml
+
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -40,3 +43,6 @@ spec:
   lifecycle: production
   owner: fake-saquad
   system: fake-system
+  definition:
+    $text: https://github.com/sumup/referrals-api/blob/master/spec/openapi.yaml
+
