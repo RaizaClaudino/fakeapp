@@ -25,22 +25,9 @@ metadata:
   description: API test
 spec:
   type: openapi
+  definition:
+    $text: https://petstore.swagger.io/v2/swagger.json
   lifecycle: production
   owner: fake-saquad
   system: fake-system
-  definition:
-    $text: https://petstore.swagger.io/v2/swagger.json
----
-apiVersion: backstage.io/v1alpha1
-kind: API
-metadata:
-  name: fake-api-second
-  tags: [externally-exposed]
-  description: API test 2
-spec:
-  type: openapi
-  lifecycle: production
-  owner: fake-saquad
-  system: fake-system
-  definition:
-    $text: https://petstore.swagger.io/v2/swagger.json
+
