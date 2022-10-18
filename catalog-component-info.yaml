@@ -26,7 +26,7 @@ metadata:
 spec:
   type: openapi
   definition:
-    $text: https://petstore.swagger.io/v2/swagger.json
+    $text: https://github.com/RaizaClaudino/fakeapp/blob/main/openapi.yaml
   lifecycle: production
   owner: fake-saquad
   system: fake-system
